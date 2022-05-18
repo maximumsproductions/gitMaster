@@ -183,7 +183,7 @@ void main() {
     vec3 colorB = vec3(1.000,0.833,0.224);
 
     float t = u_time*0.5;
-    float pct = cubicInOut( abs(fract(t)*2.0-1.) );
+    float pct = cubicInOut( abs(fract(t)*2.0-1.0) );
 
     gl_FragColor = vec4(vec3(mix(colorA, colorB, pct)),1.0);
 }
